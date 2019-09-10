@@ -8,4 +8,6 @@ all things I always forget
 ### List all opening ports
 ```netstat -tulpn```
 
+## Flutter build error:
+- Firebase For Flutter Execution failed for task ':app:transformClassesWithDexForDebug': update gradle and google service
 
