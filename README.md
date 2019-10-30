@@ -20,3 +20,6 @@ all things I always forget
 ps -A |grep java
 kill -9 8959
 java -jar MySchool-0.5.3.jar -d
+
+## Copy file to host
+scp path_to_file root@ip:/direct_path
