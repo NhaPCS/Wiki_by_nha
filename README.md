@@ -14,3 +14,9 @@ all things I always forget
 ## Flutter build flavor
 ###IOS
 ```flutter run -d 350F9D48-A958-4551-88D5-21243897CB14 --flavor lop9_ios -t lib/main_lop9_ios.dart ```
+
+
+##Jav Spring running
+ps -A |grep java
+kill -9 8959
+java -jar MySchool-0.5.3.jar -d
