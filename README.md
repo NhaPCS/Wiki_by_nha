@@ -16,10 +16,15 @@ all things I always forget
 ```flutter run -d 350F9D48-A958-4551-88D5-21243897CB14 --flavor lop9_ios -t lib/main_lop9_ios.dart ```
 
 
-##Jav Spring running
+## Jav Spring running
 ps -A |grep java
 kill -9 8959
 java -jar MySchool-0.5.3.jar -d
 
 ## Copy file to host
 scp path_to_file root@ip:/direct_path
+
+
+## Ubuntu free space
+sudo apt-get autoclean
+sudo apt-get autoremove 
