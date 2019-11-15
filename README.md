@@ -46,3 +46,6 @@ Redirecting...
 ```
 
 
+## sort by size
+
+du -hs * | sort -h
