@@ -31,12 +31,18 @@ sudo apt-get autoremove
 
 ## 
 Uninstalled Docker using:
-yum remove docker-engine.x86_64 docker-engine-selinux.noarch
+```yum remove docker-engine.x86_64 docker-engine-selinux.noarch
+
 Installed again using:
+
 curl -fsSL https://get.docker.com/ | sh
+
 chkconfig docker on
+
 service docker start
+
 The result of last command is:
 Redirecting...
+```
 
 
