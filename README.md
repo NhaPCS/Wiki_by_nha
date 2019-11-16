@@ -49,3 +49,43 @@ Redirecting...
 ## sort by size
 
 du -hs * | sort -h
+
+
+## java service manager
+
+What follows is the easiest way to install a Java application as system service in Linux.
+
+Let's assume you are using systemd (which any modern distro nowadays does):
+
+Firstly, create a service file in /etc/systemd/system named e.g. javaservice.service with this content:
+
+```
+[Unit]
+Description=Java Service
+
+[Service]
+User=nobody
+# The configuration file application.properties should be here:
+WorkingDirectory=/data 
+ExecStart=/usr/bin/java -Xmx256m -jar application.jar --server.port=8081
+SuccessExitStatus=143
+TimeoutStopSec=10
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+Secondly, notify systemd of the new service file:
+
+```systemctl daemon-reload```
+and enable it, so it runs on boot:
+
+```systemctl enable javaservice.service```
+Eventually, you can use the following commands to start/stop your new service:
+```
+systemctl start javaservice
+systemctl stop javaservice
+systemctl restart javaservice
+systemctl status javaservice
+```
