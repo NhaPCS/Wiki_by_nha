@@ -88,4 +88,7 @@ systemctl start javaservice
 systemctl stop javaservice
 systemctl restart javaservice
 systemctl status javaservice
+
+#log
+journalctl -u ezquiz -f
 ```
