@@ -92,3 +92,8 @@ systemctl status javaservice
 #log
 journalctl -u ezquiz -f
 ```
+
+## Open a port
+```
+sudo ufw allow from any to any port 10000 proto tcp
+```
